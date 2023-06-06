@@ -1,0 +1,624 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+
+html,
+body {
+  height: 100%;
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: verdana;
+  color: rgb(13, 0, 0);
+  background-image: url("branco.jpg");
+
+
+}
+
+header {
+  margin-top: 5px;
+  display: flex;
+}
+
+.logo-img {
+  width: 10vw;
+  height: auto;
+  margin-left: 20px;
+  padding-bottom: 10%;
+}
+
+.header-top {
+  height: 10rem;
+  width: 99%;
+  background-color: whitesmoke;
+  border: solid 3px black;
+}
+
+.header-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+}
+
+.header-nav li {
+  list-style: none;
+  display: block;
+  float: left;
+  width: 20%;
+  margin-top: 8%;
+  margin-left: 5%;
+  padding-right: 60px;
+  text-align: center;
+
+}
+
+.header-nav a {
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  transition: color 0.8s linear;
+  font-weight: 500;
+  border-bottom: #0000001f solid 2px;
+  animation-name: cores2;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+
+
+}
+
+.header-nav a:hover {
+  color: #ff70f5;
+
+
+}
+
+/* _________________________________________________ */
+
+.Btlogin-popup {
+  background-color: #c0def900;
+  border: transparent;
+  cursor: pointer;
+  font-size: 1.5vw;
+  transition: color .8s;
+  text-transform: uppercase;
+  font-weight: 500;
+  animation-name: cores2;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  border-bottom: #0000001f solid 2px;
+
+}
+
+.Btlogin-popup:hover {
+
+  background-color: auto;
+  color: #ff70f5;
+}
+
+/* _____________________________________________________ */
+
+.caixalogin {
+  position: absolute;
+  top: calc(50% - 200px);
+  right: calc(50% - 200px);
+  width: 400px;
+  height: 440px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform .5s ease, height .2s ease;
+
+}
+
+.caixalogin.active-popup {
+  transform: scale(1);
+}
+
+.caixalogin.active {
+  height: 520px;
+
+}
+
+.caixalogin .box-login {
+  width: 100%;
+  padding: 40px;
+
+
+}
+
+.caixalogin .box-login.login {
+  transition: transform .18s ease;
+  transform: translateX(0);
+}
+
+.caixalogin.active .box-login.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.caixalogin .box-login.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.caixalogin.active .box-login.register {
+  transition: transform .18s ease;
+  transform: translateX(0);
+}
+
+
+
+
+
+.caixalogin h2 {
+
+  font-size: 2em;
+  text-align: center;
+}
+
+.caixalogin .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #717bddb5;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+  animation-name: cores;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid;
+  margin: 30px 0;
+
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+  top: -5px;
+
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  line-height: 57px;
+
+}
+
+.lembrar-senha {
+
+  font-size: .9em;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lembrar-senha label input {
+  accent-color: rgb(23, 22, 22);
+  margin-right: 3px;
+
+}
+
+.lembrar-senha a {
+  color: black;
+  text-decoration: none;
+
+}
+
+.lembrar-senha a:hover {
+  text-decoration: underline;
+}
+
+.Bt {
+  width: 100%;
+  height: 45px;
+  border: none;
+
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  animation-name: cores;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+
+}
+
+
+
+.login-register {
+  font-size: .9em;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.login-register p a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.login-register p a:hover {
+  text-decoration: underline;
+}
+
+/* ____________________________________________________ */
+
+.forms {
+  float: left;
+  width: 45%;
+  text-align: justify;
+  
+  
+  
+}
+
+.forms h2 {
+  margin-top: 20%;
+  color: #000000b8;
+  font-size: 2.5vw;
+  text-align: center;
+  justify-content: center;
+}
+
+.formulario {
+  width: 80%;
+  max-width: 100%;
+  margin-left: 3%;
+
+
+
+}
+
+.label1,
+.button1,
+#nome1,
+#email1,
+#mensagem1 {
+
+  display:block;
+  flex: 45%;
+  font-size: 1.5vw;
+}
+
+.button1,
+#nome1,
+#email1,
+#mensagem1 {
+  width: 100%;
+  font: inherit;
+  padding: 1.25rem;
+  font-weight: 700;
+  
+
+}
+
+#nome1,
+#email1,
+#mensagem1 {
+
+  margin-bottom: 1rem;
+  color: #000000;
+  background-color: #c0def999;
+  border: 0.125rem solid transparent;
+  border-radius: 1.125rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  
+}
+
+#nome1:hover,
+#email1:hover,
+#mensagem1:hover {
+  outline: none;
+  border-color: #f5eded;
+  box-shadow: 0 0 0 0.3125rem rgb(186, 232, 228);
+}
+
+#nome1:focus,
+#email1:focus,
+#mensagem1:focus {
+  outline: none;
+  border-color: #f5eded;
+  box-shadow: 0 0 0 0.3125rem rgb(186, 232, 228);
+}
+
+.label1 {
+  margin-bottom: 0.5rem;
+  color: #0e26f7b5;
+
+}
+
+#mensagem1 {
+  min-height: 12.5rem;
+  resize: vertical;
+}
+
+.button1 {
+  border: none;
+  border-radius: 99px;
+  background-color: rgb(176, 228, 125);
+  cursor: pointer;
+  transition: 0.3s;
+  color: #000000;
+}
+
+.button1:hover,
+.button1:focus {
+  outline: none;
+  background-color: rgb(117, 151, 82);
+}
+
+/* ___________________________________________ */
+
+
+.maps {
+  float: right;
+  width: 45%;
+  height: auto;
+  margin-top: 10%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4%;
+  overflow: hidden;
+
+  
+  
+  
+  
+
+
+
+
+}
+
+.maps h3 {
+  color: #000000b8;
+  font-size: 2.5vw;
+  
+
+
+}
+
+.maps p{
+  text-align: center;
+  font-size: 1.2vw;
+}
+
+
+
+
+/* ____________________________________________ */
+
+
+
+.rodape {
+  height: 50px;
+  width: auto;
+  background-color: #000000ce;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1.7%;
+  animation-name: cores2;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+
+}
+
+
+/* ______________________________________________ */
+
+
+/* para celular: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+
+  /* para tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+
+  .col-s-2 {
+    width: 16.66%;
+  }
+
+  .col-s-3 {
+    width: 25%;
+  }
+
+  .col-s-4 {
+    width: 33.33%;
+  }
+
+  .col-s-5 {
+    width: 41.66%;
+  }
+
+  .col-s-6 {
+    width: 50%;
+  }
+
+  .col-s-7 {
+    width: 58.33%;
+  }
+
+  .col-s-8 {
+    width: 66.66%;
+  }
+
+  .col-s-9 {
+    width: 75%;
+  }
+
+  .col-s-10 {
+    width: 83.33%;
+  }
+
+  .col-s-11 {
+    width: 91.66%;
+  }
+
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  /* para desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
+
+@keyframes cores {
+  0% {
+    background: #800000;
+  }
+
+  25% {
+    background: #ffff00;
+  }
+
+  50% {
+    background: #2f91b8;
+  }
+
+  75% {
+    background: #008000;
+  }
+
+  100% {
+    background: #9b0e0e;
+  }
+}
+
+@keyframes cores2 {
+  0% {
+    color: #8e0000;
+  }
+
+  25% {
+    color: #a9a900;
+  }
+
+  50% {
+    color: #00709d;
+  }
+
+  75% {
+    color: #008500;
+  }
+
+  100% {
+    color: #c302ac;
+  }
+}

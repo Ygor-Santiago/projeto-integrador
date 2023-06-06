@@ -1,0 +1,141 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+    <title> DGRAF'S </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Alex Junior Braga Nazario">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="contatocss2/contato.css">
+    <script src="Js"></script>
+    <link rel="shortcut icon" href="contatocss2/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <div id="principal">
+        <header class="col-12 col-s-12 header-top">
+            <div class="logo">
+                <a href="index2.html">
+                    <img class="logo-img" src="contatocss2/logo_size2.png" alt="Logotipo empresa DGRAFS" width="165"
+                        height="165">
+                </a>
+            </div>
+            <nav class="header-nav">
+                <ul>
+
+                    <li><a href="projetos2.html">Projetos</a></li>
+                    <li><a href="sobre2.html">Sobre</a></li>
+                    <li><a href="contato2.html">Contatos</a></li>
+                    <li><a href="index.html"><button class="Btlogin-popup">Logoff</button></a>
+                    </li>
+
+                </ul>
+            </nav>
+        </header>
+        <!--_________________________________________________________________  -->
+        <main class="forms">
+            <h2>Contate-nos</h2>
+            <form class="formulario" action="https://formsubmit.co/dgrafsprojeto@gmail.com" method="POST">
+                <label class="label1" for="nome">Nome</label>
+                <input type="text" name="nome" id="nome1" required>
+                <label class="label1" for="email">E-mail</label>
+                <input type="email" name="email" id="email1" required>
+                <label class="label1" for="mensagem" required>Mensagem</label>
+                <textarea name="mensagem" id="mensagem1"></textarea>
+                <button class="button1" type="submit">Enviar</button>
+            </form>
+
+        </main>
+
+        <aside class="maps">
+            <h3>Sede - Santo Amaro</h3><br>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14618.603773934274!2d-46.72151947579062!3d-23.652668506005494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce51aa5f2eca95%3A0xfd9e09aabab3301b!2sR.%20Amador%20Bueno%2C%20389%20-%20Santo%20Amaro%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004752-005!5e0!3m2!1spt-BR!2sbr!4v1681482804309!5m2!1spt-BR!2sbr"
+                width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <p><strong>R. Amador Bueno, 389 - Santo Amaro, São Paulo - SP, 04752-005</strong></p>
+
+        </aside>
+
+
+
+
+        <!-- ________________________________________________________________ -->
+        <div class="caixalogin">
+            <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+
+            <div class="box-login login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" name="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <input type="password" name="senha" required>
+                        <label>Senha</label>
+                    </div>
+                    <div class="lembrar-senha">
+                        <label><input type="checkbox">esqueceu a senha?</label>
+                        <a href="contato.html">Clique aqui</a>
+                    </div>
+                    <button type="enviar" class="Bt" value="entrar"
+                        onclick="validar(email.value, senha.value)">Entrar</button>
+                    <div class="login-register">
+                        <p>Ainda não possui cadastro? <a href="#" class="register-link">Cadastre-se</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="box-login register">
+                <h2>Cadastre-se</h2>
+                <form action="https://formsubmit.co/dgrafsprojeto@gmail.com" method="post">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Senha</label>
+                    </div>
+                    <div class="lembrar-senha">
+                        <label><input type="checkbox" required>Concorda com os termos e condições</label>
+
+                    </div>
+                    <button type="enviar" class="Bt">Criar Cadastro</button>
+                    <div class="login-register">
+                        <p>Já possui cadastro? <a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- _____________________________________________________________________________________ -->
+
+
+
+    </div>
+
+    <footer class="rodape">
+        Copyright &copy; DGRAFS.com
+
+
+    </footer>
+
+    <script src="contato.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
